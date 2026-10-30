@@ -1,5 +1,5 @@
 import {expect, test} from 'vitest';
-import {Tag} from "./tag";
+import {Tag} from "../tag";
 
 test("paired without attrs without content", () => {
     expect(new Tag("button").toString()).toBe("<button></button>")

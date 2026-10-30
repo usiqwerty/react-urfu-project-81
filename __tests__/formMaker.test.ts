@@ -1,5 +1,5 @@
 import {expect, test} from 'vitest';
-import HexletCode from "./formMaker";
+import HexletCode from "@hexlet/code";
 
 
 const template = { name: 'bob', job: 'hexlet', gender: 'm' };

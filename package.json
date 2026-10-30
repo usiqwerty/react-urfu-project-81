@@ -1,6 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
+  "main": "formMaker.ts",
   "scripts": {
     "test": "vitest run"
   },
