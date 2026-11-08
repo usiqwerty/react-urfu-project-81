@@ -42,10 +42,10 @@ export default class FormMaker {
         } else if (tagName === 'textarea') {
             content = this.fields[fieldName].toString();
         }
-        let {labelHtml, ...tmpTagAttrs} = tagAttrs;
+        let {label, labelHtml, ...tmpTagAttrs} = tagAttrs;
         tagAttrs = tmpTagAttrs;
         const prettyName = fieldName.slice(0, 1).toUpperCase() + fieldName.slice(1)
-        this.fieldTags.push(new Tag('label', {for: fieldName, ...labelHtml}, prettyName));
+        this.fieldTags.push(new Tag('label', {for: fieldName, ...labelHtml}, label || prettyName));
         this.fieldTags.push(new Tag(tagName, tagAttrs, content));
     }
 
