@@ -26,7 +26,7 @@ export default class FormMaker {
         let content = '';
         if (opts.as) {
             const {as, ...rest} = opts;
-            tagAttrs = {...tagAttrs, cols: 20, rows: 40, ...rest};
+            tagAttrs = {cols: 20, rows: 40, ...tagAttrs, ...rest};
             if (as == 'textarea') {
                 tagName = 'textarea';
             }
@@ -53,7 +53,7 @@ export default class FormMaker {
 
     static formFor(obj: Record<string, string | number>, opts: { url?: string },
                    fields: (a: FormMaker) => void): string {
-        let attrs = {action: '#', method: 'post'};
+        let attrs = {method: 'post', action: '#'};
         if (opts.url) {
             attrs.action = opts.url;
         }
